@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS unit</title>
+    <style>
+        .pixel {
+            width: 20%;
+            height: 100px;
+            background-color: red;
+        }
+
+        .percent {
+            width: 50%;
+            height: 100px;
+            background-color: blue;
+        }
+        html {
+            font-size: 20px;
+        }
+        .rem {
+            width: 1rem;
+            height: 100px;
+        
+        }
+        </style>
+</head>
+<body>
+    <!-- px: pixels : đơn vị cố định, không bị thay đổi -->
+    <!--%: dựa vào thẻ char nó
+    50%: một nửa kích thước trình duyệt
+    rem: phu thuoc vao the html 
+    em: the cha gan nhat-->
+    <div class="unit-em">
+        <p>Unit em</p>
+    </div>
+    <p class="rem">Unit Rem</p>
+    <div class="pixel"></div>
+    <div class="percent"></div>
+</body>
+</html>
