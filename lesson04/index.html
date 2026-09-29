@@ -10,10 +10,13 @@
     <input type ="password" id="mat-khau" value="Nongsan@2026" />
     <button type="button" id="btn-mat-khau">Hiện</button>
     <script>
+        debugger;
         //logic show/hide password
-        
+
         const oMatkhau = document.querySelector("#mat-khau");
+        console.log(oMatkhau, "oMatkhau");
         const nut = document.querySelector("#btn-mat-khau");
+        console.log(nut, "nut");
         nut.addEventListener("click", () => {
             const dangAn = oMatkhau.type === "password";
             oMatkhau.type = dangAn ? "text" : "password";
