@@ -1,13 +1,26 @@
+/* BTVN/style.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 40px;
+  padding: 20px;
 }
 
-input {
-  width: 300px;
-  padding: 10px;
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.do {
+#onhap {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+#dem {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Đổi màu chữ sang đỏ khi đạt mốc 20 ký tự */
+#dem.do {
   color: red;
 }
