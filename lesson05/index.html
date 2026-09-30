@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm ngược otp</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            line-height: 1.6;
+        }
+        .demo-box {
+            border: 1px solid #ccc;
+            padding: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-box">
+        <button type="button" id="btn-otp">Gửi OTP</button>
+    </div>
+    
+    <script>
+        const nut = document.querySelector("#btn-otp");
+
+        nut.addEventListener("click", () => {
+            let conLai = 10; //số giây còn lại là 10
+            nut.disabled = true; //khoá nút
+            nut.textContent = `Gửi lại sau ${conLai} giây`; //cập nhật lại chũ trên nút
+
+            const dem = setInterval(() => {
+                conLai--;
+                nut.textContent = `Gửi lại sau ${conLai} giây`;
+                
+                if(conLai === 0) {
+                    clearInterval(dem); //dừng bộ đếm
+                    nut.disabled = false; //mở khoá nút
+                    nut.textContent = "Gửi OTP"; //trả lại chũ trên nút
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
