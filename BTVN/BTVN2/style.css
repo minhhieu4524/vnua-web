@@ -1,0 +1,43 @@
+body {
+  max-width: 500px;
+  margin: 20px auto;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.container {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 6px;
+}
+
+#ds {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+#ds li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+#ds button {
+  cursor: pointer;
+}
+
+/* Gạch ngang khi đã mua */
+#ds li.completed span {
+  text-decoration: line-through;
+}
