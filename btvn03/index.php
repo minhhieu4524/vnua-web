@@ -2,14 +2,14 @@
 include 'ketnoi.php';
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Quản lý sản phẩm</title>
 </head>
 <body style="font-family: Arial; margin: 30px;">
     <h2>DANH SÁCH SẢN PHẨM</h2>
-    <p><a href="them.php">+ Thêm sản phẩm mới</a></p>
+    <p><a href="create.php">+ Thêm sản phẩm mới</a></p>
 
     <table border="1" cellpadding="10" cellspacing="0" width="100%">
         <tr style="background-color: #f2f2f2;">
@@ -31,8 +31,8 @@ include 'ketnoi.php';
                 echo "<td>" . number_format($row["price"]) . " đ</td>";
                 echo "<td>" . $row["quantity"] . "</td>";
                 echo "<td>
-                        <a href='sua.php?id=" . $row["id"] . "'>Sửa</a> | 
-                        <a href='xoa.php?id=" . $row["id"] . "' onclick='return confirm(\"Bạn có chắc muốn xóa?\")'>Xóa</a>
+                        <a href='update.php?id=" . $row["id"] . "'>Sửa</a> | 
+                        <a href='delete.php?id=" . $row["id"] . "' onclick='return confirm(\"Bạn có chắc muốn xóa?\")'>Xóa</a>
                       </td>";
                 echo "</tr>";
             }
