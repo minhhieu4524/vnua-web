@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO products (name, price, quantity) VALUES ('$name', '$price', '$quantity')";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: danhsach.php");
+        header("Location: index.php");
         exit();
     } else {
         echo "Lỗi: " . $sql . "<br>" . $conn->error;
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Thêm sản phẩm</title>
@@ -29,7 +29,7 @@ $conn->close();
         <p>Tên sản phẩm: <br><input type="text" name="name" required></p>
         <p>Giá: <br><input type="number" name="price" required></p>
         <p>Số lượng: <br><input type="number" name="quantity" required></p>
-        <p><button type="submit">Lưu</button> <a href="danhsach.php">Quay lại</a></p>
+        <p><button type="submit">Lưu</button> <a href="index.php">Quay lại</a></p>
     </form>
 </body>
 </html>

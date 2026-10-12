@@ -6,7 +6,7 @@ $id = $_GET['id'];
 $sql = "DELETE FROM products WHERE id = $id";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: danhsach.php");
+    header("Location: index.php");
     exit();
 } else {
     echo "Lỗi xóa: " . $conn->error;

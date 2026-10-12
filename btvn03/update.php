@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_update = "UPDATE products SET name='$name', price='$price', quantity='$quantity' WHERE id=$id";
 
     if ($conn->query($sql_update) === TRUE) {
-        header("Location: danhsach.php");
+        header("Location: index.php");
         exit();
     } else {
         echo "Lỗi cập nhật: " . $conn->error;
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sửa sản phẩm</title>
@@ -36,7 +36,7 @@ $conn->close();
         <p>Tên sản phẩm: <br><input type="text" name="name" value="<?php echo $row['name']; ?>" required></p>
         <p>Giá: <br><input type="number" name="price" value="<?php echo $row['price']; ?>" required></p>
         <p>Số lượng: <br><input type="number" name="quantity" value="<?php echo $row['quantity']; ?>" required></p>
-        <p><button type="submit">Cập nhật</button> <a href="danhsach.php">Quay lại</a></p>
+        <p><button type="submit">Cập nhật</button> <a href="index.php">Quay lại</a></p>
     </form>
 </body>
 </html>
